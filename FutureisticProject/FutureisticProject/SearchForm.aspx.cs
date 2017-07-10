@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.Web.Script.Serialization;
+using System.Web.Services;
 
 namespace FutureisticProject
 {
@@ -12,6 +9,15 @@ namespace FutureisticProject
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        [WebMethod]
+        public static string Autocomplete(object data)
+        {
+            var javaScriptSerializer = new JavaScriptSerializer();
+            string jsonData = javaScriptSerializer.Serialize(data);
+            string url = "https://partner.ostrovok.ru/api/b2b/v2/multicomplete?data=" + jsonData;
+            return ServerRequest.SendRequest(url, "GET", string.Empty);
         }
     }
 }

@@ -11,7 +11,13 @@
     <a href='<%= ResolveUrl("~/Default.aspx") %>'>Back</a>
         <h3>Accommodation Search</h3>
     <div id="searchpage">
-                <div>
+        <div>
+            <span>Enter City:</span><span class="required">*</span>
+              <input id="autocomplete" list="cities" name="cities" />
+              <datalist id="cities">
+             </datalist>
+        </div>
+        <div>
             <span>Country:</span><span class="required">*</span>
             <select id="country">
                 <option value="0" selected="selected">Select Country</option>
@@ -95,5 +101,10 @@
             <tbody></tbody>
         </table>
     </div>
+
+    <script src='<%= ResolveUrl("~/Scripts/jQuery/jquery-1.10.2.js") %>'></script>
+    <script src='<%= ResolveUrl("~/Scripts/main.js") %>'></script>
+    <script src='<%= ResolveUrl("~/Scripts/searchForm.js") %>'></script>
+
 </body>
 </html>

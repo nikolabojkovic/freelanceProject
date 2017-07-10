@@ -31,3 +31,7 @@ C:\Users\Nikola\Documents\futuristicProject\FutureisticProject\FutureisticProjec
 C:\Users\Nikola\Documents\futuristicProject\FutureisticProject\FutureisticProject\obj\Debug\FutureisticProject.csprojResolveAssemblyReference.cache
 C:\Users\Nikola\Documents\futuristicProject\FutureisticProject\FutureisticProject\obj\Debug\FutureisticProject.dll
 C:\Users\Nikola\Documents\futuristicProject\FutureisticProject\FutureisticProject\obj\Debug\FutureisticProject.pdb
+C:\Users\Nikola\Documents\futuristicProject\FutureisticProject\FutureisticProject\bin\Newtonsoft.Json.dll
+C:\Users\Nikola\Documents\futuristicProject\FutureisticProject\FutureisticProject\bin\System.Net.Http.Formatting.dll
+C:\Users\Nikola\Documents\futuristicProject\FutureisticProject\FutureisticProject\bin\Newtonsoft.Json.xml
+C:\Users\Nikola\Documents\futuristicProject\FutureisticProject\FutureisticProject\bin\System.Net.Http.Formatting.xml
