@@ -12,12 +12,6 @@
         <h3>Accommodation Search</h3>
     <div id="searchpage">
         <div>
-            <span>Enter City:</span><span class="required">*</span>
-              <input id="autocomplete" list="cities" name="cities" />
-              <datalist id="cities">
-             </datalist>
-        </div>
-        <div>
             <span>Country:</span><span class="required">*</span>
             <select id="country">
                 <option value="0" selected="selected">Select Country</option>

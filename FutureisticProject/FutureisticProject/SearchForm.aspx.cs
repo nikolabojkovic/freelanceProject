@@ -10,14 +10,5 @@ namespace FutureisticProject
         {
 
         }
-
-        [WebMethod]
-        public static string Autocomplete(object data)
-        {
-            var javaScriptSerializer = new JavaScriptSerializer();
-            string jsonData = javaScriptSerializer.Serialize(data);
-            string url = "https://partner.ostrovok.ru/api/b2b/v2/multicomplete?data=" + jsonData;
-            return ServerRequest.SendRequest(url, "GET", string.Empty);
-        }
     }
 }

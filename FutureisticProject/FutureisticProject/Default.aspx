@@ -9,7 +9,8 @@
 <body>
     <div>
         <h2>Welcome</h2><br />
-        <a href="SearchForm.aspx">Hotel Search</a><br />
+        <a href="Hotels.aspx" >Hotel Search</a><br />
+       <%-- <a href="SearchForm.aspx">Serach Form</a><br />--%>
         <a href="#">Cancel Booked rates</a><br />
     </div>
 </body>

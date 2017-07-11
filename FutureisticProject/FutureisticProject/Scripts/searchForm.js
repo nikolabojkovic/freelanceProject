@@ -1,38 +1,6 @@
 ﻿$(document).ready(function () {
-    
-    var ajaxInProgress = false;
-    var xhr;
+
     // api requests
-
-    function autocomplete(query) {
-        if (query === "")
-            return;
-        
-        if (ajaxInProgress) {
-            ajaxInProgress = false;
-            xhr.abort();
-        }
-
-        ajaxInProgress = true;
-
-    xhr = $.ajax({
-            type: "POST",
-            contentType: "application/json; charset=utf-8",
-            url: "SearchForm.aspx/Autocomplete",
-            data: JSON.stringify({ data: { "query": query, "format": "json", "lang": "en" } }),
-            datatype: "json",
-            success: function (result) {
-               // console.log(result.d);
-                clearBindingForCities();
-                bindRegionsToHtml(JSON.parse(result.d));
-            },
-            error: function (XMLHttpRequest, textStatus, errorThrown) {
-                // hide loading gif
-                console.log("Error: " + XMLHttpRequest.responseText + "Status: " + textStatus);
-                // alert("Status: " + textStatus); alert("Error: " + XMLHttpRequest.responseText);
-            }
-        });
-    }
 
     function getAllRegions() {
         //get - api/affiliate/v2/region/list?data={"format":"json","limit":2}
@@ -2095,15 +2063,6 @@
     // end api requests
 
     // bindings
-    function bindRegionsToHtml(data) {
-        $(data.result.regions).each(function () {
-            $("#cities").append('<option value="' + this.name + '" />');
-        });
-    };
-
-    function clearBindingForCities() {
-        $("#cities").html('');
-    };
 
     function bindRegions(country) {
         var regions = getAllRegions();
@@ -2131,9 +2090,6 @@
     // end binding
 
     // events
-    $("#autocomplete").keyup(function () {
-        autocomplete($("#autocomplete").val());
-    });
 
     // bind cities for selected country
     $(document).on('change', '#country', function () {
